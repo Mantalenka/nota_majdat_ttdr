@@ -1,0 +1,8 @@
+{
+	"core": "0.8.x",
+	"map": "0.5.x",
+	"formation": "0.3.4",
+	"nota_common": "0.3.x",
+	"nota_kahlan_ttdr": "1.x",
+	"nota_majdat_swampdota": "10.0.0",
+}
