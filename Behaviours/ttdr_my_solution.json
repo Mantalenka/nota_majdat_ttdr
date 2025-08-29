@@ -1,0 +1,305 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"12dte4OIp6isrOhNHkT6AWyELeekakXM": {
+			"height": 92,
+			"title": "store",
+			"width": 208,
+			"x": 1420,
+			"y": -471
+		},
+		"258yCTVIMmrWpiwqTHXKhu8RVToflBbx": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 282,
+			"y": 9
+		},
+		"7DalU6ECiHfK6VZlIp1nsZUpsgIjiuGB": {
+			"height": 94,
+			"title": "store",
+			"width": 648,
+			"x": 1648,
+			"y": 398
+		},
+		"969VFfytxlbMozKfF53hnIn3kuI37YdU": {
+			"height": 130,
+			"title": "reference",
+			"width": 292,
+			"x": 1686,
+			"y": 808
+		},
+		"FSKL8w64JkmpqAUPkZ6b46auluYYqMYU": {
+			"height": 172,
+			"title": "reference",
+			"width": 293,
+			"x": 1661,
+			"y": 630
+		},
+		"HoHnByXUrxTfvEw6YvOw8IgBC0aw5whU": {
+			"height": 131,
+			"title": "reference",
+			"width": 284,
+			"x": 1653,
+			"y": 262
+		},
+		"Iz0mSL32SdjfwUsZgdw939mKtwu6smKx": {
+			"height": 94,
+			"title": "store",
+			"width": 582,
+			"x": 1641,
+			"y": 173
+		},
+		"R8IXWdiiZTGXkEDqxhLHPUS4uKu0JJBI": {
+			"height": 70,
+			"title": "parallel",
+			"width": 202,
+			"x": 790,
+			"y": 49
+		},
+		"SCuUdb9j5jMQSQbyoZhjEBEONNroXkFO": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1299,
+			"y": 431
+		},
+		"YmvYSAHHQMYEFBSaHdNPnei9bMcRS0Us": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1192,
+			"y": -173
+		},
+		"cezTm1lirkrGOTGcAgf4sQ10x14xtyKn": {
+			"height": 194,
+			"title": "reference",
+			"width": 397,
+			"x": 1426,
+			"y": -291
+		},
+		"eP0huN63FPzq4uAu3x2OD5n4q7T8MXTZ": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 1090,
+			"y": 220
+		},
+		"eyyVsdx3pX4nq8GHXOe3Qnq1L8SGXhI9": {
+			"height": 72,
+			"title": "wait",
+			"width": 131,
+			"x": 1433,
+			"y": -77
+		},
+		"moT2WHknTi7iXFjQOF6rTGNunomse2VW": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 1076,
+			"y": 610
+		},
+		"uL9aRxChgDygu3wn67IRvcbQV1Kg3Gfy": {
+			"height": 110,
+			"title": "reference",
+			"width": 327,
+			"x": 1277,
+			"y": 919
+		},
+		"xyHQx43pTLMuChldn0KfpZcD8FQ5C6de": {
+			"height": 92,
+			"title": "store",
+			"width": 208,
+			"x": 1431,
+			"y": -381
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [ {
+				"children": [],
+				"id": "12dte4OIp6isrOhNHkT6AWyELeekakXM",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "global.allocated_units"
+				}, {
+					"name": "value",
+					"value": "{}"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "xyHQx43pTLMuChldn0KfpZcD8FQ5C6de",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "global.allocated_atlas"
+				}, {
+					"name": "value",
+					"value": "{}"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "cezTm1lirkrGOTGcAgf4sQ10x14xtyKn",
+				"nodeType": "reference",
+				"parameters": [ {
+					"name": "behaviourName",
+					"value": "nota_majdat_ttdr.find_east_zone_with_my_people"
+				} ],
+				"referenceInputs": [],
+				"referenceOutputs": [ {
+					"name": "north_limit",
+					"value": "north_limit"
+				}, {
+					"name": "south_limit",
+					"value": "south_limit"
+				}, {
+					"name": "west_limit",
+					"value": "west_limit"
+				}, {
+					"name": "east_limit",
+					"value": "east_limit"
+				} ]
+			}, {
+				"children": [],
+				"id": "eyyVsdx3pX4nq8GHXOe3Qnq1L8SGXhI9",
+				"nodeType": "wait",
+				"parameters": [ {
+					"name": "time",
+					"value": 2
+				} ]
+			} ],
+			"id": "YmvYSAHHQMYEFBSaHdNPnei9bMcRS0Us",
+			"nodeType": "sequence",
+			"parameters": []
+		}, {
+			"children": [ {
+				"children": [ {
+					"children": [ {
+						"children": [],
+						"id": "Iz0mSL32SdjfwUsZgdw939mKtwu6smKx",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "draw_rectangle"
+						}, {
+							"name": "value",
+							"value": "nota_majdat_ttdr.drawRectangle(west_limit, south_limit, east_limit, north_limit)"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "HoHnByXUrxTfvEw6YvOw8IgBC0aw5whU",
+						"nodeType": "reference",
+						"parameters": [ {
+							"name": "behaviourName",
+							"value": "nota_majdat_ttdr.allocated_atlas"
+						} ],
+						"referenceInputs": [],
+						"referenceOutputs": [ {
+							"name": "atlasID",
+							"value": "idle_atlas"
+						} ]
+					}, {
+						"children": [],
+						"id": "7DalU6ECiHfK6VZlIp1nsZUpsgIjiuGB",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "unitid"
+						}, {
+							"name": "value",
+							"value": "nota_majdat_ttdr.findUnitInArea(units,west_limit, south_limit, east_limit, north_limit)"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "FSKL8w64JkmpqAUPkZ6b46auluYYqMYU",
+						"nodeType": "reference",
+						"parameters": [ {
+							"name": "behaviourName",
+							"value": "nota_majdat_ttdr.idle_moved_unit"
+						} ],
+						"referenceInputs": [ {
+							"name": "atlasID",
+							"value": "idle_atlas"
+						}, {
+							"name": "rescue_unitID",
+							"value": "unitid"
+						} ],
+						"referenceOutputs": []
+					}, {
+						"children": [],
+						"id": "969VFfytxlbMozKfF53hnIn3kuI37YdU",
+						"nodeType": "reference",
+						"parameters": [ {
+							"name": "behaviourName",
+							"value": "nota_majdat_ttdr.deallocate_atlas"
+						} ],
+						"referenceInputs": [ {
+							"name": "atlas",
+							"value": "idle_atlas"
+						} ],
+						"referenceOutputs": []
+					} ],
+					"id": "SCuUdb9j5jMQSQbyoZhjEBEONNroXkFO",
+					"nodeType": "sequence",
+					"parameters": []
+				} ],
+				"id": "eP0huN63FPzq4uAu3x2OD5n4q7T8MXTZ",
+				"nodeType": "repeat",
+				"parameters": []
+			}, {
+				"children": [ {
+					"children": [],
+					"id": "uL9aRxChgDygu3wn67IRvcbQV1Kg3Gfy",
+					"nodeType": "reference",
+					"parameters": [ {
+						"name": "behaviourName",
+						"value": "nota_majdat_ttdr.right_towers_of_dead"
+					} ],
+					"referenceInputs": [],
+					"referenceOutputs": []
+				} ],
+				"id": "moT2WHknTi7iXFjQOF6rTGNunomse2VW",
+				"nodeType": "repeat",
+				"parameters": []
+			} ],
+			"id": "R8IXWdiiZTGXkEDqxhLHPUS4uKu0JJBI",
+			"nodeType": "parallel",
+			"parameters": [ {
+				"name": "mode",
+				"value": "all-success"
+			} ]
+		} ],
+		"id": "258yCTVIMmrWpiwqTHXKhu8RVToflBbx",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

@@ -1,0 +1,148 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 170,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [ {
+		"name": "north_limit"
+	}, {
+		"name": "south_limit"
+	}, {
+		"name": "west_limit"
+	}, {
+		"name": "east_limit"
+	} ],
+	"properties": {
+		"0c6jzS0cV6pAdO6X2XJkKylUjrAtK4eU": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 230,
+			"y": 13
+		},
+		"8x8IT2ReoamToHsfHtBW3HcHSWKc8v2o": {
+			"height": 92,
+			"title": "store",
+			"width": 136,
+			"x": 507,
+			"y": -60
+		},
+		"CBwFsMP2VpReZquhnX2jAbz810fWgDlH": {
+			"height": 109,
+			"title": "store",
+			"width": 252,
+			"x": 507,
+			"y": 127
+		},
+		"gaFNwm8wVzXK7jC8gnH02ieuhaA7xzRC": {
+			"height": 94,
+			"title": "store",
+			"width": 503,
+			"x": 506,
+			"y": -151
+		},
+		"lfJMlp11kBf8FW0f91VAaa8VgjOwSl0m": {
+			"height": 92,
+			"title": "store",
+			"width": 138,
+			"x": 507,
+			"y": 31
+		},
+		"sLZRgrS5fPgxWI664zNMvzCzkM4umBXs": {
+			"height": 109,
+			"title": "store",
+			"width": 255,
+			"x": 516,
+			"y": 240
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "gaFNwm8wVzXK7jC8gnH02ieuhaA7xzRC",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "position_of_atlas"
+			}, {
+				"name": "value",
+				"value": "{Spring.GetUnitPosition(nota_majdat_swampdota.FindIdleAtlas())}"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "8x8IT2ReoamToHsfHtBW3HcHSWKc8v2o",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "north_limit"
+			}, {
+				"name": "value",
+				"value": "1400"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "lfJMlp11kBf8FW0f91VAaa8VgjOwSl0m",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "south_limit"
+			}, {
+				"name": "value",
+				"value": "5270"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "CBwFsMP2VpReZquhnX2jAbz810fWgDlH",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "west_limit"
+			}, {
+				"name": "value",
+				"value": "position_of_atlas[1] - 1000"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "sLZRgrS5fPgxWI664zNMvzCzkM4umBXs",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "east_limit"
+			}, {
+				"name": "value",
+				"value": "8200"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		} ],
+		"id": "0c6jzS0cV6pAdO6X2XJkKylUjrAtK4eU",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

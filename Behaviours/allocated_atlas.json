@@ -1,0 +1,76 @@
+{
+	"additionalNodes": [ {
+		"children": [],
+		"id": "7kcLFaIvBoKIi46P2nsh4a4w0ly9ry5N",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "var",
+			"value": "sensor_append_to_global_array"
+		}, {
+			"name": "value",
+			"value": "nota_majdat_ttdr.appendIDfromGlobalArray(global.allocated_atlas, atlasID)"
+		}, {
+			"name": "scriptName",
+			"value": "store"
+		} ],
+		"scriptName": "store"
+	} ],
+	"additionalParameters": {
+		"root": {
+			"height": 110,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [ {
+		"name": "atlasID"
+	} ],
+	"properties": {
+		"61TMVIhsH26YwUG1fIpXmVMgatJhxNa5": {
+			"height": 94,
+			"title": "store",
+			"width": 510,
+			"x": 573,
+			"y": -121
+		},
+		"7kcLFaIvBoKIi46P2nsh4a4w0ly9ry5N": {
+			"height": 94,
+			"title": "store",
+			"width": 561,
+			"x": 668,
+			"y": 33
+		},
+		"cLE94GrOQwbAhBG439WR5zSqPDeyitxy": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 364,
+			"y": -8
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "61TMVIhsH26YwUG1fIpXmVMgatJhxNa5",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "atlasID"
+			}, {
+				"name": "value",
+				"value": "nota_majdat_ttdr.FindIdleAtlas_not_allocate(global.allocated_atlas)"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		} ],
+		"id": "cLE94GrOQwbAhBG439WR5zSqPDeyitxy",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

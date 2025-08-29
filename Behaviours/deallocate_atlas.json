@@ -1,0 +1,43 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 108,
+			"width": 216
+		}
+	},
+	"inputs": [ {
+		"command": "BETS_UNIT",
+		"name": "atlas"
+	} ],
+	"outputs": [],
+	"properties": {
+		"c1wwq6SOXWacQzbcrKHLuKLBZZyG3vgB": {
+			"height": 94,
+			"title": "store",
+			"width": 538,
+			"x": 372,
+			"y": 6
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [],
+		"id": "c1wwq6SOXWacQzbcrKHLuKLBZZyG3vgB",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "var",
+			"value": "senzor_deallocated_atlas"
+		}, {
+			"name": "value",
+			"value": "nota_majdat_ttdr.deleteIDfromGlobalArray(global.allocated_atlas, atlas)"
+		}, {
+			"name": "scriptName",
+			"value": "store"
+		} ],
+		"scriptName": "store"
+	}
+}

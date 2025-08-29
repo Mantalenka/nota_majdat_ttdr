@@ -1,0 +1,49 @@
+local sensorInfo = {
+  name = "FindTransportedUnit",
+  desc = "Finds all my transportable units with z-position lower than given threshold (if any)",
+  author = "MajdaT + CodeCopilot",
+  date = "2025-06-30",
+  license = "notAlicense"
+}
+
+local EVAL_PERIOD_DEFAULT = -1
+
+function getInfo()
+  return {
+    period = EVAL_PERIOD_DEFAULT
+  }
+end
+
+local SpringGetTeamUnits = Spring.GetTeamUnits
+local SpringGetUnitPosition = Spring.GetUnitPosition
+local SpringGetUnitDefID = Spring.GetUnitDefID
+local SpringValidUnitID = Spring.ValidUnitID
+
+local myTeamID = Spring.GetMyTeamID
+local UnitDefs = UnitDefs
+
+-- @description: Returns list of my units that are transportable and under z-threshold
+-- @argument distance_z [number] - optional Z limit
+-- @return table of unitIDs
+return function(distance_z)
+  local teamUnits = SpringGetTeamUnits(myTeamID())
+  local result = {}
+
+  for i = 1, #teamUnits do
+    local unitID = teamUnits[i]
+    if SpringValidUnitID(unitID) then
+      local defID = SpringGetUnitDefID(unitID)
+      local def = defID and UnitDefs[defID]
+      if def and def.transportable then
+        local x, y, z = SpringGetUnitPosition(unitID)
+        if x and z then
+          if not distance_z or distance_z == 0 or z < distance_z then
+            result[#result+1] = unitID
+          end
+        end
+      end
+    end
+  end
+
+  return result
+end
