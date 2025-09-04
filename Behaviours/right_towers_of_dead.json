@@ -1,21 +1,6 @@
 {
 	"additionalNodes": [ {
 		"children": [],
-		"id": "VJeGQlCEaVKpktYc7yjwcncbYF7lAjFT",
-		"nodeType": "luaCommand",
-		"parameters": [ {
-			"name": "transporter",
-			"value": "atlas1"
-		}, {
-			"name": "unit",
-			"value": "rescue_tower1"
-		}, {
-			"name": "scriptName",
-			"value": "nota_kahlan_ttdr.unloadUnit"
-		} ],
-		"scriptName": "nota_kahlan_ttdr.unloadUnit"
-	}, {
-		"children": [],
 		"id": "G33aCUCPzpmHaFCiBc4tBAYWHu7mrxs1",
 		"nodeType": "luaCommand",
 		"parameters": [ {
@@ -32,6 +17,21 @@
 			"value": "nota_michelle_intro.moveUnit"
 		} ],
 		"scriptName": "nota_michelle_intro.moveUnit"
+	}, {
+		"children": [],
+		"id": "VJeGQlCEaVKpktYc7yjwcncbYF7lAjFT",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "transporter",
+			"value": "atlas1"
+		}, {
+			"name": "unit",
+			"value": "rescue_tower1"
+		}, {
+			"name": "scriptName",
+			"value": "nota_kahlan_ttdr.unloadUnit"
+		} ],
+		"scriptName": "nota_kahlan_ttdr.unloadUnit"
 	}, {
 		"children": [],
 		"id": "n0UlgrNvhcIVEMCC5OlJOyuFrPmH7kFP",
@@ -118,7 +118,7 @@
 		"1J4izsw3Z9v6mQM8ka4lt0vQGYX9jpqO": {
 			"height": 94,
 			"title": "store",
-			"width": 648,
+			"width": 664,
 			"x": 953,
 			"y": -418
 		},
@@ -300,7 +300,7 @@
 		"pBiLdnF4BzXkfhulBQmVSiTcDJcp1AHh": {
 			"height": 94,
 			"title": "store",
-			"width": 782,
+			"width": 798,
 			"x": 1017,
 			"y": 440
 		}
@@ -350,7 +350,7 @@
 					"value": "north_limit1"
 				}, {
 					"name": "value",
-					"value": "150"
+					"value": "-20"
 				}, {
 					"name": "scriptName",
 					"value": "store"
@@ -395,7 +395,7 @@
 					"value": "Draw_rectangle"
 				}, {
 					"name": "value",
-					"value": "nota_majdat_ttdr.drawRectangle(units,west_limit1, south_limit1, east_limit1, north_limit1)"
+					"value": "nota_majdat_ttdr.drawRectangle(units,west_limit1, south_limit1, east_limit1, north_limit1, 2)"
 				}, {
 					"name": "scriptName",
 					"value": "store"
@@ -507,7 +507,7 @@
 					"value": "_"
 				}, {
 					"name": "value",
-					"value": "nota_majdat_ttdr.drawRectangle(units, tower_pos[3]-20, tower_pos[1]+20, tower_pos[3]+20, tower_pos[1]-20)"
+					"value": "nota_majdat_ttdr.drawRectangle(units, tower_pos[3]-20, tower_pos[1]+20, tower_pos[3]+20, tower_pos[1]-20, 3)"
 				}, {
 					"name": "scriptName",
 					"value": "store"

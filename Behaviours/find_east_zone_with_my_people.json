@@ -89,7 +89,7 @@
 				"value": "north_limit"
 			}, {
 				"name": "value",
-				"value": "1400"
+				"value": "-20"
 			}, {
 				"name": "scriptName",
 				"value": "store"

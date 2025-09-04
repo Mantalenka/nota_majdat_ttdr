@@ -14,7 +14,7 @@ function getInfo()
   }
 end
 
-return function(units, west, south, east, north)
+return function(units, west, south, east, north, ID)
 
 	local topLeftCorner = Vec3(north, 0, west)
 	local topRightCorner = Vec3(north, 0, east)
@@ -24,28 +24,28 @@ return function(units, west, south, east, north)
 	-- draw debug rectangle
 	if (Script.LuaUI('exampleDebug_update')) then
 		Script.LuaUI.exampleDebug_update(
-      "top", -- key
+      "top" .. ID, -- key
       {	-- data
         startPos = topLeftCorner, 
         endPos = topRightCorner
       }
     )
     Script.LuaUI.exampleDebug_update(
-      "right", -- key
+      "right" .. ID, -- key
       {	-- data
         startPos = topRightCorner, 
         endPos = bottomRightCorner
       }
     )
     Script.LuaUI.exampleDebug_update(
-      "bottom", -- key
+      "bottom" .. ID, -- key
       {	-- data
         startPos = bottomRightCorner, 
         endPos = bottomLeftCorner
       }
     )
     Script.LuaUI.exampleDebug_update(
-      "left", -- key
+      "left" .. ID, -- key
       {	-- data
         startPos = bottomLeftCorner, 
         endPos = topLeftCorner

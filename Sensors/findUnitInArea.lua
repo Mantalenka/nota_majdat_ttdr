@@ -58,6 +58,7 @@ return function(units, west, south, east, north)
     --global.allocated_units = {}
   --end
 
+  --[[
   local allUnits = SpringGetAllUnits()
   for _, unitID in ipairs(allUnits) do
     if SpringGetUnitTeam(unitID) == myTeamID then -- and not isAllocated(unitID) then
@@ -76,4 +77,26 @@ return function(units, west, south, east, north)
     end
   end
   return FAILURE
+  ]]--
+  
+  local myUnitsInRectangle = Spring.GetUnitsInRectangle(west, north, east, south, myTeamID)
+  local missionInfo = Sensors.core.MissionInfo()
+  local centerPos = missionInfo.safeArea.center
+  
+  for i=math.random(1,#myUnitsInRectangle), #myUnitsInRectangle  do
+	local unitID = myUnitsInRectangle[i]
+	local udid = SpringGetUnitDefID(unitID)
+    local def = UnitDefs[udid]
+    if 
+		def and 
+		def.cantBeTransported == false and
+		(Spring.GetUnitTransporter(unitID) == nil)
+	then
+		local x, y, z = SpringGetUnitPosition(unitID)
+		local positionVector = Vec3(x, y, z)
+		if positionVector:Distance(centerPos) >= 600 then
+			return unitID
+		end
+	end
+  end
 end
