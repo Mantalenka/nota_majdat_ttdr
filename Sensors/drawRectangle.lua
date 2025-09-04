@@ -52,7 +52,7 @@ return function(units, west, south, east, north)
       }
     )
 	end
-	Spring.Echo("topLeftCorner: ", topLeftCorner, " topRightCorner: ", topRightCorner, " bottomLeftCorner: ", bottomLeftCorner, " bottomRightCorner: ", bottomRightCorner)
+	--Spring.Echo("topLeftCorner: ", topLeftCorner, " topRightCorner: ", topRightCorner, " bottomLeftCorner: ", bottomLeftCorner, " bottomRightCorner: ", bottomRightCorner)
 
   return SUCCESS
 end
