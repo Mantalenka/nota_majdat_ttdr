@@ -1,19 +1,19 @@
 {
 	"additionalNodes": [ {
 		"children": [],
-		"id": "cEvdT3ruRpQM8dmUtSpen5Z0GvRtSOlQ",
+		"id": "VJeGQlCEaVKpktYc7yjwcncbYF7lAjFT",
 		"nodeType": "luaCommand",
 		"parameters": [ {
-			"name": "var",
-			"value": "seer_pos"
+			"name": "transporter",
+			"value": "atlas1"
 		}, {
-			"name": "value",
-			"value": "{Spring.GetUnitPosition(nota_majdat_swampdota.FindUnit(\"armseer\"))}"
+			"name": "unit",
+			"value": "rescue_tower1"
 		}, {
 			"name": "scriptName",
-			"value": "store"
+			"value": "nota_kahlan_ttdr.unloadUnit"
 		} ],
-		"scriptName": "store"
+		"scriptName": "nota_kahlan_ttdr.unloadUnit"
 	}, {
 		"children": [],
 		"id": "cpD7w4QRxDhVHCDiBZRHJRyeFq2Dopgp",
@@ -32,6 +32,72 @@
 			"value": "nota_kahlan_ttdr.moveUnitTo"
 		} ],
 		"scriptName": "nota_kahlan_ttdr.moveUnitTo"
+	}, {
+		"children": [],
+		"id": "cEvdT3ruRpQM8dmUtSpen5Z0GvRtSOlQ",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "var",
+			"value": "seer_pos"
+		}, {
+			"name": "value",
+			"value": "{Spring.GetUnitPosition(nota_majdat_swampdota.FindUnit(\"armseer\"))}"
+		}, {
+			"name": "scriptName",
+			"value": "store"
+		} ],
+		"scriptName": "store"
+	}, {
+		"children": [],
+		"id": "n0UlgrNvhcIVEMCC5OlJOyuFrPmH7kFP",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "position",
+			"value": "mlinfo.safeArea.center"
+		}, {
+			"name": "unit",
+			"value": "atlas1"
+		}, {
+			"name": "radius",
+			"value": "300"
+		}, {
+			"name": "scriptName",
+			"value": "nota_kahlan_ttdr.moveUnitTo"
+		} ],
+		"scriptName": "nota_kahlan_ttdr.moveUnitTo"
+	}, {
+		"children": [],
+		"id": "G33aCUCPzpmHaFCiBc4tBAYWHu7mrxs1",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "assigned_unit",
+			"value": "atlas1"
+		}, {
+			"name": "position",
+			"value": "Vec3(tower_pos[1], tower_pos[2], tower_pos[3])"
+		}, {
+			"name": "tolerance",
+			"value": "300"
+		}, {
+			"name": "scriptName",
+			"value": "nota_michelle_intro.moveUnit"
+		} ],
+		"scriptName": "nota_michelle_intro.moveUnit"
+	}, {
+		"children": [],
+		"id": "N0Ct5vWRQI10SyBx5pdQcJzBQrl8Xmqb",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "transporter",
+			"value": "atlas1"
+		}, {
+			"name": "unit",
+			"value": "rescue_tower1"
+		}, {
+			"name": "scriptName",
+			"value": "nota_kahlan_ttdr.loadUnit"
+		} ],
+		"scriptName": "nota_kahlan_ttdr.loadUnit"
 	} ],
 	"additionalParameters": {
 		"root": {
@@ -105,6 +171,13 @@
 			"x": 506,
 			"y": -598
 		},
+		"JoYriBvFhnUoDDKGw7jsftDeXAzpZeZk": {
+			"height": 92,
+			"title": "nota_cihlkl_ttdr.unloadFriendlyUnit",
+			"width": 280,
+			"x": 479,
+			"y": 1031
+		},
 		"K32NCSnj8qD1rgL3XbAJMgsSmLZAVfEO": {
 			"height": 94,
 			"title": "store",
@@ -123,8 +196,8 @@
 			"height": 92,
 			"title": "nota_kahlan_ttdr.loadUnit",
 			"width": 244,
-			"x": 504,
-			"y": 743
+			"x": 753,
+			"y": 741
 		},
 		"Nge8x0gTTGhTn954qNNJWcxlmLepUqUG": {
 			"height": 92,
@@ -147,12 +220,19 @@
 			"x": 504,
 			"y": 828
 		},
+		"TvHkacW0TOrFui6rpfNsD6JdHy8iKeJo": {
+			"height": 92,
+			"title": "nota_cihlkl_ttdr.loadFriendlyUnit",
+			"width": 264,
+			"x": 487,
+			"y": 740
+		},
 		"VJeGQlCEaVKpktYc7yjwcncbYF7lAjFT": {
 			"height": 92,
 			"title": "nota_kahlan_ttdr.unloadUnit",
 			"width": 260,
-			"x": 504,
-			"y": 1090
+			"x": 797,
+			"y": 1078
 		},
 		"Vs2S2zaDfvpnXRiR4C0CoWa652cgij8F": {
 			"height": 94,
@@ -207,8 +287,8 @@
 			"height": 112,
 			"title": "nota_kahlan_ttdr.moveUnitTo",
 			"width": 269,
-			"x": 504,
-			"y": 955
+			"x": 783,
+			"y": 957
 		},
 		"pBiLdnF4BzXkfhulBQmVSiTcDJcp1AHh": {
 			"height": 94,
@@ -435,37 +515,19 @@
 			"scriptName": "store"
 		}, {
 			"children": [],
-			"id": "G33aCUCPzpmHaFCiBc4tBAYWHu7mrxs1",
+			"id": "TvHkacW0TOrFui6rpfNsD6JdHy8iKeJo",
 			"nodeType": "luaCommand",
 			"parameters": [ {
-				"name": "assigned_unit",
-				"value": "atlas1"
-			}, {
-				"name": "position",
-				"value": "Vec3(tower_pos[1], tower_pos[2], tower_pos[3])"
-			}, {
-				"name": "tolerance",
-				"value": "300"
-			}, {
-				"name": "scriptName",
-				"value": "nota_michelle_intro.moveUnit"
-			} ],
-			"scriptName": "nota_michelle_intro.moveUnit"
-		}, {
-			"children": [],
-			"id": "N0Ct5vWRQI10SyBx5pdQcJzBQrl8Xmqb",
-			"nodeType": "luaCommand",
-			"parameters": [ {
-				"name": "transporter",
+				"name": "rescuer",
 				"value": "atlas1"
 			}, {
 				"name": "unit",
 				"value": "rescue_tower1"
 			}, {
 				"name": "scriptName",
-				"value": "nota_kahlan_ttdr.loadUnit"
+				"value": "nota_cihlkl_ttdr.loadFriendlyUnit"
 			} ],
-			"scriptName": "nota_kahlan_ttdr.loadUnit"
+			"scriptName": "nota_cihlkl_ttdr.loadFriendlyUnit"
 		}, {
 			"children": [],
 			"id": "POtONqAdTYxtUR7MnMYFJLqdSbJ6d918",
@@ -486,37 +548,19 @@
 			"scriptName": "nota_kahlan_ttdr.moveUnitTo"
 		}, {
 			"children": [],
-			"id": "n0UlgrNvhcIVEMCC5OlJOyuFrPmH7kFP",
+			"id": "JoYriBvFhnUoDDKGw7jsftDeXAzpZeZk",
 			"nodeType": "luaCommand",
 			"parameters": [ {
-				"name": "position",
-				"value": "mlinfo.safeArea.center"
-			}, {
-				"name": "unit",
-				"value": "atlas1"
-			}, {
-				"name": "radius",
-				"value": "300"
-			}, {
-				"name": "scriptName",
-				"value": "nota_kahlan_ttdr.moveUnitTo"
-			} ],
-			"scriptName": "nota_kahlan_ttdr.moveUnitTo"
-		}, {
-			"children": [],
-			"id": "VJeGQlCEaVKpktYc7yjwcncbYF7lAjFT",
-			"nodeType": "luaCommand",
-			"parameters": [ {
-				"name": "transporter",
+				"name": "savior",
 				"value": "atlas1"
 			}, {
 				"name": "unit",
 				"value": "rescue_tower1"
 			}, {
 				"name": "scriptName",
-				"value": "nota_kahlan_ttdr.unloadUnit"
+				"value": "nota_cihlkl_ttdr.unloadFriendlyUnit"
 			} ],
-			"scriptName": "nota_kahlan_ttdr.unloadUnit"
+			"scriptName": "nota_cihlkl_ttdr.unloadFriendlyUnit"
 		}, {
 			"children": [],
 			"id": "cdwJw86TkvnAQWeiuD7aYQDQwNTYHNr5",
