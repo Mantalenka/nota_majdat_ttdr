@@ -38,40 +38,33 @@
 			"x": 282,
 			"y": 9
 		},
-		"5bU15gqa5ZoNshswlEDT5vZFGsiRQKpX": {
-			"height": 60,
-			"title": "sequence",
-			"width": 143,
-			"x": 1180,
-			"y": 882
-		},
 		"7DalU6ECiHfK6VZlIp1nsZUpsgIjiuGB": {
 			"height": 94,
 			"title": "store",
 			"width": 648,
-			"x": 1647,
-			"y": 398
+			"x": 1845,
+			"y": 401
 		},
 		"969VFfytxlbMozKfF53hnIn3kuI37YdU": {
 			"height": 130,
-			"title": "reference",
-			"width": 292,
-			"x": 1685,
-			"y": 808
+			"title": "reference_dealocate_if_success_transport",
+			"width": 351,
+			"x": 1848,
+			"y": 683
 		},
 		"FSKL8w64JkmpqAUPkZ6b46auluYYqMYU": {
 			"height": 172,
 			"title": "reference",
 			"width": 293,
-			"x": 1660,
-			"y": 630
+			"x": 1851,
+			"y": 504
 		},
 		"HoHnByXUrxTfvEw6YvOw8IgBC0aw5whU": {
 			"height": 131,
 			"title": "reference",
 			"width": 284,
-			"x": 1652,
-			"y": 262
+			"x": 1850,
+			"y": 265
 		},
 		"Iz0mSL32SdjfwUsZgdw939mKtwu6smKx": {
 			"height": 94,
@@ -79,6 +72,13 @@
 			"width": 582,
 			"x": 1640,
 			"y": 173
+		},
+		"Ju7koMG3frMGRrxwFD02g0OdiauwNrLs": {
+			"height": 130,
+			"title": "reference_dealocate_if_failer_transport",
+			"width": 351,
+			"x": 1476,
+			"y": 748
 		},
 		"R8IXWdiiZTGXkEDqxhLHPUS4uKu0JJBI": {
 			"height": 70,
@@ -91,15 +91,8 @@
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 1298,
-			"y": 431
-		},
-		"UoSLWD2tsBJwtpdyeOJYA8F0gFyk0tMw": {
-			"height": 72,
-			"title": "wait",
-			"width": 131,
-			"x": 1375,
-			"y": 873
+			"x": 1496,
+			"y": 434
 		},
 		"YmvYSAHHQMYEFBSaHdNPnei9bMcRS0Us": {
 			"height": 60,
@@ -128,6 +121,13 @@
 			"width": 131,
 			"x": 1432,
 			"y": -77
+		},
+		"gPlLpG54dWpiBJXMflfmU57DOHEXPmlm": {
+			"height": 70,
+			"title": "selector",
+			"width": 131,
+			"x": 1280,
+			"y": 430
 		},
 		"moT2WHknTi7iXFjQOF6rTGNunomse2VW": {
 			"height": 60,
@@ -225,52 +225,70 @@
 			"children": [ {
 				"children": [ {
 					"children": [ {
-						"children": [],
-						"id": "HoHnByXUrxTfvEw6YvOw8IgBC0aw5whU",
-						"nodeType": "reference",
-						"parameters": [ {
-							"name": "behaviourName",
-							"value": "nota_majdat_ttdr.allocated_atlas"
+						"children": [ {
+							"children": [],
+							"id": "HoHnByXUrxTfvEw6YvOw8IgBC0aw5whU",
+							"nodeType": "reference",
+							"parameters": [ {
+								"name": "behaviourName",
+								"value": "nota_majdat_ttdr.allocated_atlas"
+							} ],
+							"referenceInputs": [],
+							"referenceOutputs": [ {
+								"name": "atlasID",
+								"value": "idle_atlas"
+							} ]
+						}, {
+							"children": [],
+							"id": "7DalU6ECiHfK6VZlIp1nsZUpsgIjiuGB",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "var",
+								"value": "unitid"
+							}, {
+								"name": "value",
+								"value": "nota_majdat_ttdr.findUnitInArea(units,west_limit, south_limit, east_limit, north_limit)"
+							}, {
+								"name": "scriptName",
+								"value": "store"
+							} ],
+							"scriptName": "store"
+						}, {
+							"children": [],
+							"id": "FSKL8w64JkmpqAUPkZ6b46auluYYqMYU",
+							"nodeType": "reference",
+							"parameters": [ {
+								"name": "behaviourName",
+								"value": "nota_majdat_ttdr.idle_moved_unit"
+							} ],
+							"referenceInputs": [ {
+								"name": "atlasID",
+								"value": "idle_atlas"
+							}, {
+								"name": "rescue_unitID",
+								"value": "unitid"
+							} ],
+							"referenceOutputs": []
+						}, {
+							"children": [],
+							"id": "969VFfytxlbMozKfF53hnIn3kuI37YdU",
+							"nodeType": "reference",
+							"parameters": [ {
+								"name": "behaviourName",
+								"value": "nota_majdat_ttdr.deallocate_atlas"
+							} ],
+							"referenceInputs": [ {
+								"name": "atlas",
+								"value": "idle_atlas"
+							} ],
+							"referenceOutputs": []
 						} ],
-						"referenceInputs": [],
-						"referenceOutputs": [ {
-							"name": "atlasID",
-							"value": "idle_atlas"
-						} ]
+						"id": "SCuUdb9j5jMQSQbyoZhjEBEONNroXkFO",
+						"nodeType": "sequence",
+						"parameters": []
 					}, {
 						"children": [],
-						"id": "7DalU6ECiHfK6VZlIp1nsZUpsgIjiuGB",
-						"nodeType": "luaCommand",
-						"parameters": [ {
-							"name": "var",
-							"value": "unitid"
-						}, {
-							"name": "value",
-							"value": "nota_majdat_ttdr.findUnitInArea(units,west_limit, south_limit, east_limit, north_limit)"
-						}, {
-							"name": "scriptName",
-							"value": "store"
-						} ],
-						"scriptName": "store"
-					}, {
-						"children": [],
-						"id": "FSKL8w64JkmpqAUPkZ6b46auluYYqMYU",
-						"nodeType": "reference",
-						"parameters": [ {
-							"name": "behaviourName",
-							"value": "nota_majdat_ttdr.idle_moved_unit"
-						} ],
-						"referenceInputs": [ {
-							"name": "atlasID",
-							"value": "idle_atlas"
-						}, {
-							"name": "rescue_unitID",
-							"value": "unitid"
-						} ],
-						"referenceOutputs": []
-					}, {
-						"children": [],
-						"id": "969VFfytxlbMozKfF53hnIn3kuI37YdU",
+						"id": "Ju7koMG3frMGRrxwFD02g0OdiauwNrLs",
 						"nodeType": "reference",
 						"parameters": [ {
 							"name": "behaviourName",
@@ -282,37 +300,27 @@
 						} ],
 						"referenceOutputs": []
 					} ],
-					"id": "SCuUdb9j5jMQSQbyoZhjEBEONNroXkFO",
-					"nodeType": "sequence",
-					"parameters": []
+					"id": "gPlLpG54dWpiBJXMflfmU57DOHEXPmlm",
+					"nodeType": "selector",
+					"parameters": [ {
+						"name": "active",
+						"value": "true"
+					} ]
 				} ],
 				"id": "eP0huN63FPzq4uAu3x2OD5n4q7T8MXTZ",
 				"nodeType": "repeat",
 				"parameters": []
 			}, {
 				"children": [ {
-					"children": [ {
-						"children": [],
-						"id": "UoSLWD2tsBJwtpdyeOJYA8F0gFyk0tMw",
-						"nodeType": "wait",
-						"parameters": [ {
-							"name": "time",
-							"value": 10
-						} ]
-					}, {
-						"children": [],
-						"id": "uL9aRxChgDygu3wn67IRvcbQV1Kg3Gfy",
-						"nodeType": "reference",
-						"parameters": [ {
-							"name": "behaviourName",
-							"value": "nota_majdat_ttdr.right_towers_of_dead"
-						} ],
-						"referenceInputs": [],
-						"referenceOutputs": []
+					"children": [],
+					"id": "uL9aRxChgDygu3wn67IRvcbQV1Kg3Gfy",
+					"nodeType": "reference",
+					"parameters": [ {
+						"name": "behaviourName",
+						"value": "nota_majdat_ttdr.right_towers_of_dead"
 					} ],
-					"id": "5bU15gqa5ZoNshswlEDT5vZFGsiRQKpX",
-					"nodeType": "sequence",
-					"parameters": []
+					"referenceInputs": [],
+					"referenceOutputs": []
 				} ],
 				"id": "moT2WHknTi7iXFjQOF6rTGNunomse2VW",
 				"nodeType": "repeat",

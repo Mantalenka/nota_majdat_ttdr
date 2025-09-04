@@ -6,7 +6,7 @@ local sensorInfo = {
   license = "notAlicense"
 }
 
-local EVAL_PERIOD_DEFAULT = 1 -- update every frame
+local EVAL_PERIOD_DEFAULT = -1 -- update every frame
 
 function getInfo()
   return {
